@@ -1,0 +1,154 @@
+/* .navbar {
+    background-color: #a5a5a589;
+} */
+
+/* 全局樣式 */
+
+/* 全局樣式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+/* 左側固定導航 */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 關閉按鈕 */
+.close-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+/* Logo */
+.logo img {
+    width: 100%;
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* 導航連結 */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #404f45;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    font-weight: 700;
+}
+
+.nav-links a:hover {
+    color: #a5a5a5;
+}
+
+/* CHECK IN / CHECK OUT 資訊 */
+.check-info {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 預約按鈕 */
+.booking button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #404f45;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.booking button:hover {
+    background-color: #a5a5a5;
+}
+
+/* 主要內容區域 */
+.main-content {
+    margin-left: 210px;
+    padding: 40px;
+    width: calc(100% - 250px);
+    background-color: #f7f7f7;
+}
+
+.main-content h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #9f9587;
+}
+
+.main-content h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #9f9587;
+}
+
+
+/* 🎯 平板（小於 1024px）以下時的樣式 */
+@media (max-width: 1024px) {
+    /* 主要內容區改為佔滿全寬 */
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* 隱藏側邊欄 */
+    .sidebar {
+        transform: translateX(-250px);
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 當 sidebar 被開啟時 */
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    /* 漢堡選單按鈕 */
+    .menu-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        padding: o;
+        cursor: pointer;
+        font-size: 30px;
+        z-index: 1000;
+        color: #404f45;
+    }
+
+    /* 顯示關閉按鈕 */
+    /* .close-btn {
+        display: block;
+    } */
+}
